@@ -1,0 +1,39 @@
+<app-create></app-create><hr> <br>
+<h2> My Heroes </h2>
+<ul>
+
+  <li *ngFor="let hero of heroes; let i = index" >
+
+    <span class="number"> {{hero.id}}: </span> {{hero.name}} 
+    <a class="link" (click)="deleteHero(i)"> Delete </a>
+    <a class="link1" (click)="editHero(hero,i)"> Edit </a>
+
+  </li>
+
+</ul>
+
+<input type="text" [(ngModel)]="suraj.id" name="txtId">
+<input type="text" [(ngModel)]="suraj.name" name="txtName">
+<button (click)="onEdit()"> EDIT </button>
+
+<!-- <app-create></app-create>   
+   
+<hr><br> 
+ 
+<h2> My Heroes </h2>
+
+<ul>
+
+  <li *ngFor="let hero of heroes; let i = index" >
+
+    <span class="number"> {{hero.id}}: </span> {{hero.name}}{{suraj}}
+    <a class="link" (click)="deleteHero(i)"> Delete </a>
+    <a class="link1" (click)="editHero(hero.name,i)"> Edit </a>
+
+  </li>
+
+</ul>
+
+<input type="text" [(ngModel)]="" name="txtId">
+<input type="text" [(ngModel)]="" name="txtName">
+<button> EDIT </button> -->
